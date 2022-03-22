@@ -8,4 +8,5 @@ public interface MaterialModel
     String getmaterial_img_url();
     String getmaterial_download_url();
     //Long getdiscipline_id();
+    String getmaterial_type();
 }

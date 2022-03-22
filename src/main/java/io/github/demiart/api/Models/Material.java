@@ -40,6 +40,9 @@ public class Material
     @Column(name = "material_download_url")
     private String materialDownloadUrl;
 
+    @Column(name = "material_type")
+    private String materialType;
+
     @Column(name = "id_discipline")
     private Long disciplineId;
 }

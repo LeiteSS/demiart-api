@@ -27,6 +27,9 @@ public class MaterialDTO
     @NotNull
     private String materialDownloadUrl;
 
+    @NotNull
+    private String materialType;
+
     private Long disciplineId;
 
 }
