@@ -23,7 +23,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin("https://demisart.netlify.app/")
+@CrossOrigin(origins = "https://demisart.netlify.app")
 public class DisciplineControllers
 {
     @Autowired
