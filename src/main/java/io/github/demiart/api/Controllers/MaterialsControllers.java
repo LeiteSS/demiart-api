@@ -23,8 +23,8 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1")
 @CrossOrigin(origins = "https://demisart.netlify.app")
+@RequestMapping("/api/v1")
 public class MaterialsControllers {
 
     @Autowired
