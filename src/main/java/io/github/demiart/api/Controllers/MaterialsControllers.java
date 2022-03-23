@@ -1,8 +1,10 @@
 package io.github.demiart.api.Controllers;
 
+import io.github.demiart.api.Business.dto.DisciplineDTO;
 import io.github.demiart.api.Business.dto.MaterialDTO;
 import io.github.demiart.api.Exceptions.DisciplineNotFoundException;
 import io.github.demiart.api.Exceptions.MaterialAlreadyExistsException;
+import io.github.demiart.api.Exceptions.MaterialNotFoundException;
 import io.github.demiart.api.Services.MaterialsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,6 +33,12 @@ public class MaterialsControllers {
     @PostMapping("/disciplines/{disciplineId}")
     public MaterialDTO create(@PathVariable Long disciplineId, @RequestBody @Valid MaterialDTO materialDTO) throws MaterialAlreadyExistsException, DisciplineNotFoundException {
         return service.create(disciplineId, materialDTO);
+    }
+
+    @GetMapping("/disciplines/{disciplineId}/materials/{materialName}")
+    public MaterialDTO findByDisciplineName(@PathVariable Long disciplineId, @PathVariable String materialName)
+            throws MaterialNotFoundException {
+        return service.findByName(materialName);
     }
 
     @GetMapping("/disciplines/materials")

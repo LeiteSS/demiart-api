@@ -52,8 +52,9 @@ public class MaterialsServiceImpl implements MaterialsService
     }
 
     @Override
-    public MaterialDTO findByName(String materialName) {
-        return null;
+    public MaterialDTO findByName(String materialName) throws MaterialNotFoundException {
+        Material materialFounded = findMaterialByName(materialName);
+        return materialsMapper.toDTO(materialFounded);
     }
 
     @Override

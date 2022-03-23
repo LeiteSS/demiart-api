@@ -13,7 +13,7 @@ public interface MaterialsService
 {
     MaterialDTO create(Long disciplineId, MaterialDTO materialDTO) throws MaterialAlreadyExistsException, DisciplineNotFoundException;
 
-    MaterialDTO findByName(String materialName);
+    MaterialDTO findByName(String materialName) throws MaterialNotFoundException;
 
     List<MaterialDTO> listAll();
 
